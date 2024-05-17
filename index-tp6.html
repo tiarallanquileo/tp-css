@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tp6</title>
+    <link rel="stylesheet" href="./css/estilos.css">
+</head>
+
+<body>
+    <header>
+        <h1>Trabajo 06 - empezamos con el diseño</h1>
+    </header>
+    <main>
+        <h3>1.1- ¿Qué significa CSS?</h3>
+        <p>Las hojas de estilo en cascada (CSS, cascading style sheets) permiten crear páginas web atractivas. Pero
+            ¿cómo funcionan realmente? En este artículo explicaremos qué es el CSS con un ejemplo de sintaxis sencillo y
+            describiremos algunos términos clave sobre este lenguaje.
+        </p>
+        <h3>1.2-Para qué sirve el CSS? ¿Qué programa se utiliza para interpretar el CSS? (es para 🧠)</h3>
+        <p> Como hemos mencionado, el CSS es un lenguaje informático que especifica cómo se presentan los documentos a
+            los usuarios: cómo se diseñan, compaginan, etc.
+        </p>
+        <h3>1.3- ¿A qué se llama regla de CSS? </h3>
+        <p>el CSS es un lenguaje basado en reglas:usuario define las reglas que espesifican los grupos de estilos que
+            van a plicarse a elementos particulares o grupos de elemntos de la pagina web.
+        </p>
+        <h3>1.4- ¿Cuál es la anatomía de la regla de CSS? Agregar imagen explicativa y utilizando una lista descriptiva
+            explicar sus elementos. </h3>
+        <img src="t.png" alt="taller" width="350">
+
+        <dl>
+            <dt>
+                Selector:
+            </dt>
+            <dd>selecciona el(los) elemento(s) a dar estilo (en este caso, los elementos p ). Para dar
+                estilo a un elemento diferente, solo cambia el selector
+
+            </dd>
+        </dl>
+        <dl>
+            <dt>
+                Declaración:
+            </dt>
+            <dd>
+                aplica las propiedades que querés dar al elemento seleccionado en el Selector. En este caso hay una sola
+                regla, pero puede haber más.
+            </dd>
+        </dl>
+        <dl>
+            <dt>
+                Propiedades:
+            </dt>
+            <dd>
+                es lo que te permite dar un estilo a un elemento HTML. En el ejemplo la propiedad es color que le dará
+                color a las letras de los párrafos. Siempre las propiedades se ubicarán a la izquierda.
+            </dd>
+        </dl>
+        <dl>
+            <dt>
+                Valor de la propiedad:
+            </dt>
+            <dd>
+                las propiedades deben tener un valor. Cada propiedad tiene valores definidos. Cada valor se ubicará a la
+                derecha.
+            </dd>
+        </dl>
+        <h3> 1.5- ¿Qué es un selector en CSS? </h3>
+        <p>El CSS tendrá diferentes tipos de selectores, un selector nos permitirá aplicar estilos a elementos
+            específicos de HTML. De esta forma es posible ser preciso al momento de aplicar diseño a un sitio web.
+        </p>
+        <h3> 1.6- Identificar y definir los selectores: de ID, de clases, universal, de etiquetas, descendente. </h3>
+        <dl>
+            <dt>Selector universal </dt>
+            <dd> Nos permite aplicar estilos a todos los elementos HTML de un documento y se indica mediante el *.
+                * {
+                color:red;
+                }
+                Todos los elementos HTML tendrán un color de texto red.
+
+            </dd>
+        </dl>
+        <dl>
+            <dt>Selector por etiquetas</dt>
+            <dd>Aplicamos propiedades CSS a una etiqueta. La misma se identifica sin utilizar <>. Por ejemplo.
+
+                    p {
+                    color:red;
+                    }
+                    Podemos, seleccionar varias etiquetas al mismo tiempo concatenándolas con el signo , (coma). Por
+                    ejemplo:
+
+                    p,h1 {
+                    color:red;
+                    }
+                    En el ejemplo anterior, tanto la p como la h1 tendrán de color de letra roja. Reordar que se
+                    aplicarán a todas las etiquetas del documento HTML.
+
+            </dd>
+
+        </dl>
+        <dl>
+            <dt>Selector descendente</dt>
+            <dd>Con este selector seleccionamos un elemento que está dentro de otro del mismo tipo. Estos seectores
+                siempre están formados por dos o más selectores separados entre si. El último selector será el elemento
+                HTML al que se le aplicará las propiedades de CSS.
+
+                Por ejemplo:
+
+                p span {
+                color:green;
+                }
+            </dd>
+        </dl>
+        <dl>
+            <dt>Selector de clases</dt>
+            <dd>Los selectores de clases comienzan siempre por un . (punto). Los clientes web (navegadores) identifican
+                este punto y lo distinguen del resto de los selectores.
+
+                Por ejemplo:
+
+                <p class="primer-parrafo">Texto de un párrafo</p>
+                Para definir en HTML el uso de los selectores de clase, se utiliza el atributo class.
+
+                En css se aplica así:
+
+                .primer-parrafo {
+                font-size: 2em;
+                }
+                A todas las etiquetas que tengan la clase primer-parrafo, se aplicará un font-size (tamaño de letra)
+                específico.
+
+                Las clases pueden ser utilizadas varias veces y en distintas etiquetas, lo que nos hace pensar que es
+                necesario ver cuales son la características que queremos aplicar a las etiquetas que sean comunes a
+                varias.
+
+                A su vez, podemos seleccionar un conjunto de etiquetas que selecione todas las etiquetas que tengan una
+                clase particular.
+
+                p.primer-parrafo {
+                color: #445544;
+                }
+                En el ejemplo anterior, seleccionamos todos los párrafos que tengan la clase primer-parrafo y le
+                aplicamos un color de letra especial.
+
+            </dd>
+        </dl>
+        <dl>
+            <dt>Selector de ID</dt>
+            <dd>ste tipo de selector es igual al de clase, aunque lo aplicaremos a un único elemento HTML de nuestra
+                página. Esto se debe a que el atributo ID de HTML identifica a un elemento HTML por medio de un nombre.
+                Por ejemplo:
+
+                <h1 id="titulo">Título Principal</h1>
+                Para aplicar CSS solamente a ID titulo, tendremos que seleccionar dicho ID utilizar el # seguido del
+                nombre:
+
+                #titulo {
+                color: violet;
+                }
+                De la misma forma que el caso anterior, podemos seleccionar un elemento basado en el id. Por ejemplo:
+
+                a#titulo {
+                color: red;
+                }
+                En el ejemplo anterior se aplicará la propiedad color a la etiqueta a (anchor) que tenga el ID #titulo.
+
+            </dd>
+        </dl>
+        <h3>1.7- Explicar brevemente utilizando una lista ordenada: ¿cómo funciona el CSS? </h3>
+        <p>Las listas ordenadas son aquellas que sus elementos tienen un criterio de ordenamiento, por ejemplo, una
+            tabla de posiciones de un campeonato en CSS funciona </p>
+
+
+
+    </main>
+    <footer>
+        <p>tiari 4 3</p>
+    </footer>
+</body>
+
+</html>
