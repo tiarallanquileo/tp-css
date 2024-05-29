@@ -17,7 +17,7 @@
             border-style: dotted;
             border-color: coral;
             border-top: 2px rgb(244, 96, 187) ;
-            boder-bottom: 2px solid;
+            border-bottom: 2px solid;
             /*
               la caja tiene 4 lados:
               -arriba:top: 
@@ -31,6 +31,8 @@
             /*margenes*/
             margin:50px;/*se aplica a los 4*/
             margin-right: 12px;
+            box-shadow: 5px 5px  10px rgb(244, 96, 187);
+            color:darkcyan;
 
 
         }
@@ -41,5 +43,15 @@
     <div class="caja">
         CET N* 30
     </div>
+    <div class="caja"><!--padre-->
+        <div class="a"><!--hijo-->
+          A
+        </div>
+        <div class="b"><!--hijo-->
+         B
+        </div>
+    </div>
+
+
 </body>
 </html>
