@@ -26,7 +26,7 @@ header h1 {
     /* tamaño de fuente. em es un unidad de medida de css es relativa al elemento psfre de 16px*/
 }
 
-vav ul {
+nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -37,4 +37,73 @@ nav ul li {
     display: inline-block;
     /*pone la lista horizontal*/
     margin: 10px;
+    background-color: indianred;
+    border: 1px saddlebrown;
+    padding: 5px;
+}
+
+nav ul li a {
+    color: darkcyan;
+    text-decoration: none;
+    /*elimina el subrayado de la etiqueta anchor(a)*/
+    text-transform: uppercase;
+    font-weight: 500;
+    /* peso del contorno de la fuente*/
+}
+
+/*main*/
+section {
+    background-color: lavenderblush;
+    border: 2px seagreen;
+    margin: 3px 2px; /*top-bottom lefy-right*/
+     margin:10px 5px 5px 15px;  /* top-right-bottom-left*/
+        text-align: left;
+}
+
+section {
+    margin-left: 10px;
+}
+
+.conteiner{
+    display: flex;
+    /*trabajan con las cajas segun su disposicion.pone su contenido uno al lado del otro de forma horizontal*/
+}
+.imagen{
+    margin: 10px;
+}
+
+
+
+/*pie*/
+/* forma anidada de escribir css*/
+footer nav ul li a {
+    font-weight: 200;
+}
+
+footer {
+    nav {
+        background-color: firebrick;
+
+        ul {
+            li {
+                background-color: transparent;
+                border: 0;
+
+                a {
+                    color: fuchsia
+                }
+            }
+
+        }
+    }
+}
+.redes{
+    width: 30px;
+
+}
+.sociales{
+    list-style:none;
+}
+.sociales li{
+    display: inline-block;
 }
